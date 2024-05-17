@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/2560px-Star_Wars_Logo.svg.png" alt="Star Wars Logo" style="max-height: 10rem;">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <p>Rebelión: {{ rebellionCount }}</p>
+        <p>Imperio: {{ empireCount }}</p>
+        <p>Neutral: {{ neutralCount }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let starship of starships">
+        <div class="card">
+          <img class="card-img-top" [src]="starship.imageUrl" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{ starship.name }}</h5>
+            <p class="card-text">Fabricante: {{ starship.manufacturer }}</p>
+            <p class="card-text">{{ starship.description | slice:0:100 }}...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
